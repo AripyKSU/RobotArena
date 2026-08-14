@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a4c4a66dd80bd05428cd93526b32f42f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg_Scifi_Music/BPM=113.txt
+  uploadId: 627568

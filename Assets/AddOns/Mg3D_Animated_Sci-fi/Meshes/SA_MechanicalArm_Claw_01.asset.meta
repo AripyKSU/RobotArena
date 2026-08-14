@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1d7b6c6310056246b7e2506902856ba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Meshes/SA_MechanicalArm_Claw_01.asset
+  uploadId: 627568

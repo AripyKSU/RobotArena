@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7408074a3164d2e42b1d498c8c9ae858
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Weapon_Module_RocketLauncher_R.prefab
+  uploadId: 627568

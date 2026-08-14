@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c6b4f98e62f1d104f8658bba08e5d56f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Gameplay/Managers/PlayerWeaponsManager.cs
+  uploadId: 0

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c6745e43eec8eaf438dab5654972c3ab
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/VFX_Railgun_MuzzleFlash.prefab
+  uploadId: 627568

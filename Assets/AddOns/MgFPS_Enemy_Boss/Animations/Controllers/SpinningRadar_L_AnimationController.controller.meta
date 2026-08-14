@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d1fcbe3306d81c944a6592f36bc750f5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Controllers/SpinningRadar_L_AnimationController.controller
+  uploadId: 627568

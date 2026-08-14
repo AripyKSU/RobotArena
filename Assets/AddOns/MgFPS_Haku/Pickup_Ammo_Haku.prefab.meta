@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b9941c59cf8d0254ea8a16ecae6661f7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Pickup_Ammo_Haku.prefab
+  uploadId: 627568

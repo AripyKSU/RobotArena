@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd1de7aade353824c8c3f4bc10b56dd2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Materials/VFX_RocketLauncher_Projectile_Trail.mat
+  uploadId: 627568

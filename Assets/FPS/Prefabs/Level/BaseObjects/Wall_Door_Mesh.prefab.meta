@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 81f93335543589a4f91b584e567ac59e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/BaseObjects/Wall_Door_Mesh.prefab
+  uploadId: 627568

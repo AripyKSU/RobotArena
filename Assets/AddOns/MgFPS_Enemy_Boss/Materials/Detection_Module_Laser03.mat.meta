@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b595fa6ac1c8e140a16c03b9d28fece
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Materials/Detection_Module_Laser03.mat
+  uploadId: 627568

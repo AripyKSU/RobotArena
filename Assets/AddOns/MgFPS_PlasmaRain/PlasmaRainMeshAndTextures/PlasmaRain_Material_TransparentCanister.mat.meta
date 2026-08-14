@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 291e68244080dc748a95e33cf6ab8a76
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_PlasmaRain/PlasmaRainMeshAndTextures/PlasmaRain_Material_TransparentCanister.mat
+  uploadId: 627568

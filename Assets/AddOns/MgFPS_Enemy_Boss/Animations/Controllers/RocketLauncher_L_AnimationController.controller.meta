@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 956ca3a62889ad549b12b45e62aefe95
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Controllers/RocketLauncher_L_AnimationController.controller
+  uploadId: 627568

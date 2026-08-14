@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b318fabc73446b746a1005cede0c4ceb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Weapons/Weapon_Blaster.prefab
+  uploadId: 627568

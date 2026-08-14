@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6a1befbed563f04f892fc096959b96c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Molt/Weapon_Molt.prefab
+  uploadId: 627568

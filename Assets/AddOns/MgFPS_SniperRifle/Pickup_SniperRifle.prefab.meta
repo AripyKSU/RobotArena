@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 875fff87562175c4c8fd5ad104f1672e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_SniperRifle/Pickup_SniperRifle.prefab
+  uploadId: 627568

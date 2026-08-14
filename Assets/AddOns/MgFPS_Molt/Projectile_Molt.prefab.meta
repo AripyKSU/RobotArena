@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0b52628ed8463a442a45df2ab852ad7b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Molt/Projectile_Molt.prefab
+  uploadId: 627568

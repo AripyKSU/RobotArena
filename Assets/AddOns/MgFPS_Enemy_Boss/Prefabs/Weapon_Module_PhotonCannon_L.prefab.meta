@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a0c937823c964f44d9f9b0471bbfce9d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Weapon_Module_PhotonCannon_L.prefab
+  uploadId: 627568

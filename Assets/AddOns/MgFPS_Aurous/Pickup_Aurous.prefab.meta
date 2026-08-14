@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f85df061af5c57b4ca7ed69c180a3cd5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Pickup_Aurous.prefab
+  uploadId: 627568

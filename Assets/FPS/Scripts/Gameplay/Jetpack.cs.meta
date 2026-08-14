@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 48f22a420493bcf4a8ca3e259797484f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Gameplay/Jetpack.cs
+  uploadId: 0

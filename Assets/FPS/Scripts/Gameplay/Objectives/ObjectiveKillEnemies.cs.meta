@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a3cff9918d8018a44989bf444e3232f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Gameplay/Objectives/ObjectiveKillEnemies.cs
+  uploadId: 0

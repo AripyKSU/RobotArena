@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 35ad0cd6ad35e4d45af2a0b595bd3de0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Quasar/Quasar_VFX/Quasar_DiscImpact.prefab
+  uploadId: 627568

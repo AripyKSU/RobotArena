@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1963faa456b54a942b4ba48143e4416f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Aurous_VFX/VFX_BlobSparks_Aurous.prefab
+  uploadId: 627568

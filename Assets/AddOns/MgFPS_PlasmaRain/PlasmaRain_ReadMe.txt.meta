@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2697f50fee974d4eb077b5747bf753a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_PlasmaRain/PlasmaRain_ReadMe.txt
+  uploadId: 627568

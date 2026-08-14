@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 14230079d28d0bc448ef2cf82a64685d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Navigation_Module_SingleJet.prefab
+  uploadId: 627568

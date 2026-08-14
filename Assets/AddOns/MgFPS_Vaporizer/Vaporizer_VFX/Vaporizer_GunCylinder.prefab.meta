@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d1868953ab920e4b9010c3d5aeeb221
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Vaporizer/Vaporizer_VFX/Vaporizer_GunCylinder.prefab
+  uploadId: 627568

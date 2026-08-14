@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 97d358d9abf0b2049871edab777f2c5a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_RemixSFX/RemixSFX_ReadMe.txt
+  uploadId: 627568

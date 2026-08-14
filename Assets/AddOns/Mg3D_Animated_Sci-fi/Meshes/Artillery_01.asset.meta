@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1b72507554d304e4290e955dbc2768a1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Meshes/Artillery_01.asset
+  uploadId: 627568

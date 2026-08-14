@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 761cdc9e4e883334cbdcea062d0befa7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Player.prefab
+  uploadId: 627568

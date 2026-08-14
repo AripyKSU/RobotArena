@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f09300285d7cda4bac714dace582dda
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Vaporizer/Projectile_Vaporizer.prefab
+  uploadId: 627568

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2fef5c9c1684a84584b6b773d93ae43
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_Animations/Haku_Shoot.anim
+  uploadId: 627568

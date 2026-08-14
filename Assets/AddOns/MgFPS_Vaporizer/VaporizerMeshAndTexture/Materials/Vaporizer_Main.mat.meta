@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 96db4fa30e575834480ef84a1ecf66b7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Vaporizer/VaporizerMeshAndTexture/Materials/Vaporizer_Main.mat
+  uploadId: 627568

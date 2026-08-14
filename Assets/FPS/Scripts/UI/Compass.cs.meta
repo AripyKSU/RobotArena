@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fa1d13df263b6a0429b733192dcff01f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/UI/Compass.cs
+  uploadId: 0

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 608caff71a6b37341a4b925115154544
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Pickup_Thunderlight.prefab
+  uploadId: 627568

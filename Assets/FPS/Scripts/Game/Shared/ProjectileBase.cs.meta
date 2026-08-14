@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1962d3d25050a4a44819b089007baf39
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Game/Shared/ProjectileBase.cs
+  uploadId: 0

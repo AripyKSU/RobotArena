@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 530af3a8082ffb14897ac6b74259b8a1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Art/Materials/VFX/Lazer_Red.mat
+  uploadId: 0

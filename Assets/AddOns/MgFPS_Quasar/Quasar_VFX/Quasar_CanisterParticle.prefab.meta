@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 67207f585b1ba5c4bbbe44f9c4afd084
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Quasar/Quasar_VFX/Quasar_CanisterParticle.prefab
+  uploadId: 627568

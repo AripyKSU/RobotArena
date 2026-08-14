@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e8263a944ee058d479fddf8e046a708e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Scenes/DemoFPSBossSettings.lighting
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d48b487f11e62940a978c7c0c0cbcb4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_LazerSparksRed.prefab
+  uploadId: 627568

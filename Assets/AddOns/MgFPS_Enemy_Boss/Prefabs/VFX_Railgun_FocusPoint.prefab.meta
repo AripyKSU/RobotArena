@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7bbe635e3c15c3642b08f81b9f628972
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/VFX_Railgun_FocusPoint.prefab
+  uploadId: 627568

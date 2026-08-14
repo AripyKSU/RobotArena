@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 326ba5fbec7a8e84fa7cf5c6c633f4c8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Vaporizer/Vaporizer_VFX/VFX_VaporOverheat.prefab
+  uploadId: 627568

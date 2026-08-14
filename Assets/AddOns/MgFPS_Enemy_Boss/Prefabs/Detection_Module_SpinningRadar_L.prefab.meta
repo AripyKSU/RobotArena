@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 280633f5eb2f59f41b7c33c6e2fd79f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Detection_Module_SpinningRadar_L.prefab
+  uploadId: 627568

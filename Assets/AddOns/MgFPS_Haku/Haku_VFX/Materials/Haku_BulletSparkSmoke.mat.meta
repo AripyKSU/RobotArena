@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6544598601d9df94e8879c1c8889d5f4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_VFX/Materials/Haku_BulletSparkSmoke.mat
+  uploadId: 627568

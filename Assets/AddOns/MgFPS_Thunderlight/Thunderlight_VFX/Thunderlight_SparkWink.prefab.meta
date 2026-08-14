@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d3fc51ce768b2f48ae88feaeb8e868b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Thunderlight_SparkWink.prefab
+  uploadId: 627568

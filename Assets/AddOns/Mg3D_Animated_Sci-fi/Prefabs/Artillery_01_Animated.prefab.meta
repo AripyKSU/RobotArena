@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 55883033d5eca3d4787e61230ae1fca8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Prefabs/Artillery_01_Animated.prefab
+  uploadId: 627568

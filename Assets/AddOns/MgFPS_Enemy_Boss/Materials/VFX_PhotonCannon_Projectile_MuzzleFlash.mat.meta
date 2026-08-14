@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c29d38b5bc7ccb04f99a49024ebc6b51
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Materials/VFX_PhotonCannon_Projectile_MuzzleFlash.mat
+  uploadId: 627568

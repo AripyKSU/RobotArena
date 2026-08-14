@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f35cc2034d1c7c43ae240b56d99f4d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_VFX/Materials/Haku_MuzzleFlash_02.mat
+  uploadId: 627568

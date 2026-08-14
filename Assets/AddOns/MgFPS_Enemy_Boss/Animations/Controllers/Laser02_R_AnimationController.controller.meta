@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 65179c49b6e2fc44bbbb5b8a29e3de36
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Controllers/Laser02_R_AnimationController.controller
+  uploadId: 627568

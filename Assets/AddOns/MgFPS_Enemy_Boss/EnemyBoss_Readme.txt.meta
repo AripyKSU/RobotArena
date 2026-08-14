@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8f29ecdc8ebbc824b9570f0b69116111
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/EnemyBoss_Readme.txt
+  uploadId: 627568

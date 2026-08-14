@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 509d754db50222f46b673c4778f267e4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/Signs/Sign_Basic_Floor.prefab
+  uploadId: 627568

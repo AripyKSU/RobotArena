@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc920f16bd0d23249beb18747354859c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Weapon_Module_Railgun_R.prefab
+  uploadId: 627568

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f26e9a75c87e38d4ca860f5a4594caa4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_SniperRifle/RifleEffectsHandler.cs
+  uploadId: 627568

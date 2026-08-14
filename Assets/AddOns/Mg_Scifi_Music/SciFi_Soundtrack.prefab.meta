@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5e6b861e4f5eb664ba2898c5485aadd4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg_Scifi_Music/SciFi_Soundtrack.prefab
+  uploadId: 627568

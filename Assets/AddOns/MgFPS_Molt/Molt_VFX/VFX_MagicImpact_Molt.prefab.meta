@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a7ca62a76a20fc40bb8d6d6d4d91edb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Molt/Molt_VFX/VFX_MagicImpact_Molt.prefab
+  uploadId: 627568

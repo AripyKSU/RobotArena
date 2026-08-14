@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b24ec026ef038ea45b4d6937d7b6ff6c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_VFX/Materials/Haku_BulletSparkTrail.mat
+  uploadId: 627568

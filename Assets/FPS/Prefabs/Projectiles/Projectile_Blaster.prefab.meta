@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3c6b27d949cdda749892906e1f1d1b27
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Projectiles/Projectile_Blaster.prefab
+  uploadId: 627568

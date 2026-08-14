@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 10078a1461d24744f8765850c99569df
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Quasar/Weapon_Quasar.prefab
+  uploadId: 627568

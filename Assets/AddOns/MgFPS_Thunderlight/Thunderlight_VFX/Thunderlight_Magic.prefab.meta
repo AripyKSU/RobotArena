@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 654cbfa8252698e41bdf27be18d4507d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Thunderlight_Magic.prefab
+  uploadId: 627568

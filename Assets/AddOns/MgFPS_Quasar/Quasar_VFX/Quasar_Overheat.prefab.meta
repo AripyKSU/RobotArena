@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1823f40ba0fd70a408e67e0751f517b7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Quasar/Quasar_VFX/Quasar_Overheat.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cd17687759887a0438ee021e51abc9d9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/Dungeon/Dun_Wall.prefab
+  uploadId: 627568

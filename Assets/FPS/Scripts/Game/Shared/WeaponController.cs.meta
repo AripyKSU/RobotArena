@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3ad90ba0b1477764da373f5ec01a8cb5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Game/Shared/WeaponController.cs
+  uploadId: 0

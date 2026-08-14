@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e93f1e25937277d41be898a6db0c4d45
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Detection_Module_Searchlight_R.prefab
+  uploadId: 627568

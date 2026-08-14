@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 74f2c33b8fe4dd1438ccabe722bd9fd6
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg_Scifi_Music/SciFiSoundtrack_ReadMe.txt
+  uploadId: 627568

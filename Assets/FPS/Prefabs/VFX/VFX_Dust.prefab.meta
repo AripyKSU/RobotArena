@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ecdbb7f81f59b934cb72306019ee7a41
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_Dust.prefab
+  uploadId: 627568

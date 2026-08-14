@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ef607aeb00cc1214ab7aa1f86a984abf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/UI/PlayerHealthBar.cs
+  uploadId: 0

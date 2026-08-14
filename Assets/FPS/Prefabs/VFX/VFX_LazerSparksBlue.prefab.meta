@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 358eca6adc32a89459c54b6b62d9c825
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_LazerSparksBlue.prefab
+  uploadId: 627568

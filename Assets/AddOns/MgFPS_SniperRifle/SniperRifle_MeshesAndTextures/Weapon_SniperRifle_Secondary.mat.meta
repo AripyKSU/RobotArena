@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19bc3452f13edb94591a2534f729a872
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_SniperRifle/SniperRifle_MeshesAndTextures/Weapon_SniperRifle_Secondary.mat
+  uploadId: 627568

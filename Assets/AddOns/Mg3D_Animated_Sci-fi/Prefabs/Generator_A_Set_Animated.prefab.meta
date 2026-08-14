@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c9e540b9b644e584692a1e7967cd53e9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Prefabs/Generator_A_Set_Animated.prefab
+  uploadId: 627568

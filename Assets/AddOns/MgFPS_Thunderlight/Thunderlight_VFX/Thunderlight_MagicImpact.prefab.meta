@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0f1690416d044d6408010ef0ece1ddbc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Thunderlight_MagicImpact.prefab
+  uploadId: 627568

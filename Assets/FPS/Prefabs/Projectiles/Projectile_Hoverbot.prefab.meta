@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec753d54f333bb944b8b04884ad63828
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Projectiles/Projectile_Hoverbot.prefab
+  uploadId: 627568

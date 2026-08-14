@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2288f02dfebff6c4ea148b2a7102a9ab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_Animations/Haku_Reload.anim
+  uploadId: 627568

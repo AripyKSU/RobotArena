@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3ea2ebe448a58f640a64a091bce65892
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Materials/Magic_Spark.mat
+  uploadId: 627568

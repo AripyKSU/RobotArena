@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a7d68b1a502e02a49b8efb1b86a8c931
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_LazerSparksGreen.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f57683642da875844a7a88e93c2dc673
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/VFX_Railgun_Charge.prefab
+  uploadId: 627568

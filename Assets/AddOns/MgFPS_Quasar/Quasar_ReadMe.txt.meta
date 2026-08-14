@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec58b060550f01048a8eda193e316161
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Quasar/Quasar_ReadMe.txt
+  uploadId: 627568

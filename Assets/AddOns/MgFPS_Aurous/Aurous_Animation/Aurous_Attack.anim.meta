@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 412267e8b96091f45a3d951470009e54
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Aurous_Animation/Aurous_Attack.anim
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c1f95b2a073069e4091731002c38a3df
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/Directional Light.prefab
+  uploadId: 627568

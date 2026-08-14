@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0c83981f98d88cc47ab998b8c755a99a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/BoomShot_VFX/BoomShot_Overheat.prefab
+  uploadId: 627568

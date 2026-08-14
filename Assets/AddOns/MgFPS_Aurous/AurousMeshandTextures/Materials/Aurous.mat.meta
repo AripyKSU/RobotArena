@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6fc44d18442fad4ab2e2ac91a79780d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/AurousMeshandTextures/Materials/Aurous.mat
+  uploadId: 627568

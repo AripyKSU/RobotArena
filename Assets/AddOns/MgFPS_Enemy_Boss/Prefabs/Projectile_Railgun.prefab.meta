@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 715a6c3c0d67f0a41bf149ad1665172a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Projectile_Railgun.prefab
+  uploadId: 627568

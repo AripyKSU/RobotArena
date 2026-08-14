@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 513785daf84f2a243b0cda079e6835cd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/UI/CompassMarkerEnemy.prefab
+  uploadId: 627568

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4641b24e9c456444488c035a1073660e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Fireballer/Fireballer_VFX/Materials/SmokeTexture.mat
+  uploadId: 627568

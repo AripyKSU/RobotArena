@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dac5ddb3ce9b8884ca9588dc620ffcab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Gameplay/Managers/PlayerInputHandler.cs
+  uploadId: 0

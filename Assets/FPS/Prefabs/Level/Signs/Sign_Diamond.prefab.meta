@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a7566d85b04856b42a956c9b162ee747
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/Signs/Sign_Diamond.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 582a0eeafb6643d4fa34892d7c7befd2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Projectile_Aurous.prefab
+  uploadId: 627568

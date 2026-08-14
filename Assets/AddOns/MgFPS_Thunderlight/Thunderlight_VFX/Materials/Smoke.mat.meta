@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d347e89533a0274884ca0c0a1423bc6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Materials/Smoke.mat
+  uploadId: 627568

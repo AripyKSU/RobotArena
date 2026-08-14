@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8983b94a3dd543a488a996972fc3683b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_Magazine.prefab
+  uploadId: 627568

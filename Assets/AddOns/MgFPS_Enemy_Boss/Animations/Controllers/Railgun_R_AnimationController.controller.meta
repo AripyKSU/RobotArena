@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bde6d1a8233b5b846ad96d210da50eb9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Controllers/Railgun_R_AnimationController.controller
+  uploadId: 627568

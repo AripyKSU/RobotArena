@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7468cd18030a0204ab08baf7ac36ff1e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_JetpackTrail.prefab
+  uploadId: 627568

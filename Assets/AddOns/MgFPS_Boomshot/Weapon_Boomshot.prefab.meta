@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f9e6f47202077c64dba51eef4eda7fd4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/Weapon_Boomshot.prefab
+  uploadId: 627568

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1396705c98fbe88418884f9f1b67ecd9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_PlasmaRain/PlasmaRainMeshAndTextures/WeaponTintShadergraph.shadergraph
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 35af8bf2573f2d9458eb42510e2d6006
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/Rooms/Room_Medium.prefab
+  uploadId: 627568

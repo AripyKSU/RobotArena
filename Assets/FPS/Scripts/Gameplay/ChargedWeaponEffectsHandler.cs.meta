@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b92ab16a4151e294a9e6f5a025221be2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Scripts/Gameplay/ChargedWeaponEffectsHandler.cs
+  uploadId: 0

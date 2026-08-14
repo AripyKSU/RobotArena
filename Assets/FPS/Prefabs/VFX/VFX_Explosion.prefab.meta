@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 45ce85b82008be84287f2c7e5bf07647
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/VFX/VFX_Explosion.prefab
+  uploadId: 627568

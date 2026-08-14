@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b5c648405f0127c4ba0b5b58cd987e57
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Art/Shaders/ProjectorMultiply.shader
+  uploadId: 0

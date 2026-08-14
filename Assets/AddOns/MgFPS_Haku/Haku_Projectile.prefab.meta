@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7477f4a55b713404babac205850c0328
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_Projectile.prefab
+  uploadId: 627568

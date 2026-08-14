@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4e1fb25069622af40a8bea8f663fac10
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/BoomShot_VFX/BoomShot_MuzzleFlash.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1bd3d1e3182b44f4bb5bcf049e14067f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Navigation_Module_TwinJet.prefab
+  uploadId: 627568

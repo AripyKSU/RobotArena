@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39e941eea1f9b0c4481a1150b51c07e2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Weapon_Thunderlight.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5549f14ccca267145bc072bb0c8837bb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Prefabs/SA_MechanicalArm_Assembled_Animated.prefab
+  uploadId: 627568

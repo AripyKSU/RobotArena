@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f3830f66f76b2b49a41ab412cce8f96
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Fireballer/Weapon_Fireballer.prefab
+  uploadId: 627568

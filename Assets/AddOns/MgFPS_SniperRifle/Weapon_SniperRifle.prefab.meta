@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a3d20718f5f4f9147b1a38a1d1821ad2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_SniperRifle/Weapon_SniperRifle.prefab
+  uploadId: 627568

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a9d872635d775849bc78156f970434c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 31900000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Mask/Enemy_Boss.mask
+  uploadId: 627568

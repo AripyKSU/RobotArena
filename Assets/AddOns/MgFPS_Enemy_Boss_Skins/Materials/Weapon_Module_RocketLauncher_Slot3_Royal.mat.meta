@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e9c981c8d94300747b90f3d09773d07a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss_Skins/Materials/Weapon_Module_RocketLauncher_Slot3_Royal.mat
+  uploadId: 627568

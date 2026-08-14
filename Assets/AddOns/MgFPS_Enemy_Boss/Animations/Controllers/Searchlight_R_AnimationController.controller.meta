@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19c46e56e10dd8941ae95362b4e95c93
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Animations/Controllers/Searchlight_R_AnimationController.controller
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 570bdec1f0bc85a4a9f604457766f014
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Aurous_VFX/VFX_MagicImpact_Aurous.prefab
+  uploadId: 627568

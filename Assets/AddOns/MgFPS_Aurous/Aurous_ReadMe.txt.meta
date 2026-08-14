@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1ac6135324656b448be333aaf6191b8
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Aurous/Aurous_ReadMe.txt
+  uploadId: 627568

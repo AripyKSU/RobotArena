@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8e1fcaef7abc62a46887d635a380acd4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/VFX_PhotonCannon_MuzzleFlash.prefab
+  uploadId: 627568

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8b4c7e66b13ee4448bca2891b7ae3a31
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/BoomShot_VFX/Boomshot_GunCylinder.prefab
+  uploadId: 627568

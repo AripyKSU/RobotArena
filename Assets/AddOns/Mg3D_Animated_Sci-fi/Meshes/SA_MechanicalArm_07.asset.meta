@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7fc3643b3319014478f26c981d14249e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Meshes/SA_MechanicalArm_07.asset
+  uploadId: 627568

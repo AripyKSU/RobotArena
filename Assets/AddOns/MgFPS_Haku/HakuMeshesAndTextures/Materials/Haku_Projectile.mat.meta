@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1a1d033f0981b34fb9e8a0ec61438b0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/HakuMeshesAndTextures/Materials/Haku_Projectile.mat
+  uploadId: 627568

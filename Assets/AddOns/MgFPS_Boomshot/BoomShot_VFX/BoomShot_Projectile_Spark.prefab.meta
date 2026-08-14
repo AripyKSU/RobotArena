@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: adc33dcfc3582814b939058ecf88c91e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/BoomShot_VFX/BoomShot_Projectile_Spark.prefab
+  uploadId: 627568

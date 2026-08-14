@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39ef422616f16334f8d6423075cf10c1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Enemy_Boss_Variant01.prefab
+  uploadId: 627568

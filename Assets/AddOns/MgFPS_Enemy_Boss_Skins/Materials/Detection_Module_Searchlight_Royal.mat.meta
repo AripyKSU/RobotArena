@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 449a4ceed37ab0a4793eeb4b3a006771
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss_Skins/Materials/Detection_Module_Searchlight_Royal.mat
+  uploadId: 627568

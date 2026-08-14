@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f72a8daf2a7b2d4d8c0e3438358a8f1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/MainLvl/Section3/Pit_Walls.prefab
+  uploadId: 627568

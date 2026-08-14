@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c609617ffdf6ea541b74fe638832c38f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_PlasmaRain/Weapon_PlasmaRain.prefab
+  uploadId: 627568

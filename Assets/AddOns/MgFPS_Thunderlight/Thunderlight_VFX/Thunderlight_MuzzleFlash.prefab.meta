@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d0200721271c6eb499c8ff5a1f2aa966
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Thunderlight_MuzzleFlash.prefab
+  uploadId: 627568

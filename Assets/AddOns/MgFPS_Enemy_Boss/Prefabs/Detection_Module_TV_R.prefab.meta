@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 379e7f2f1f0ed26438b516d5a77df71d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Enemy_Boss/Prefabs/Detection_Module_TV_R.prefab
+  uploadId: 627568

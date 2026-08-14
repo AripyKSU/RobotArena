@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9ad2adcfa5c806f43857e329cf7e4a5c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Thunderlight/Thunderlight_VFX/Materials/Magic_Star.mat
+  uploadId: 627568

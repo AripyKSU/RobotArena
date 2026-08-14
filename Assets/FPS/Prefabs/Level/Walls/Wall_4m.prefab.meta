@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7ba64c0944716c24f911914e2e6af7a4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/Level/Walls/Wall_4m.prefab
+  uploadId: 627568

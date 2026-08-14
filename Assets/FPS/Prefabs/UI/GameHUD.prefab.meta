@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7ff14361843237d43afc85e1cb16e295
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/UI/GameHUD.prefab
+  uploadId: 627568

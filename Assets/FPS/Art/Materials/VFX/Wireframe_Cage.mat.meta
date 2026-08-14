@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d737cdf1ca21a1941a07c6b9a9b5f1d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 
+  assetPath: Assets/FPS/Art/Materials/VFX/Wireframe_Cage.mat
+  uploadId: 0

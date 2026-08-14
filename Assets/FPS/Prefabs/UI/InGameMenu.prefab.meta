@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 08dec1e68a552c649889571e90fa7b2d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/FPS/Prefabs/UI/InGameMenu.prefab
+  uploadId: 627568

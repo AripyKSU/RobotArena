@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4a941121ce7e184982463cdf1b1fb09
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Boomshot/BoomShotMeshesandTextures/Materials/BoomShot_Liquid.mat
+  uploadId: 627568

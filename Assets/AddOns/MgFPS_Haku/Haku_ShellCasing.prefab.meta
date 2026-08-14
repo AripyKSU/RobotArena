@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 463f6c8a42a562745ad0d114393f15d1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Haku/Haku_ShellCasing.prefab
+  uploadId: 627568

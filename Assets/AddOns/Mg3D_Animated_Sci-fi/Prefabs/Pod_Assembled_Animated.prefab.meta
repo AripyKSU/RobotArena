@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1fda425dbbb20c4094d170e3bff6391
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Prefabs/Pod_Assembled_Animated.prefab
+  uploadId: 627568

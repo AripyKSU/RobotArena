@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 60bc7ea05d84dd04f9bee83b769e4bec
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Vaporizer/Pickup_Vaporizer.prefab
+  uploadId: 627568

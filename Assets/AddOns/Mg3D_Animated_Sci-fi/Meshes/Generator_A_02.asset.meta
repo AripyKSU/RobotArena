@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d0f136b1ca0f5624ba52e484ce360542
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/Mg3D_Animated_Sci-fi/Meshes/Generator_A_02.asset
+  uploadId: 627568

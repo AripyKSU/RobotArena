@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6ebc687a0bc53a49b71360d36511f3c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156015
+  packageName: Unity Learn | FPS Microgame | URP
+  packageVersion: 3.1.0
+  assetPath: Assets/AddOns/MgFPS_Fireballer/Fireballer_VFX/Materials/FireballerAdditive.mat
+  uploadId: 627568
