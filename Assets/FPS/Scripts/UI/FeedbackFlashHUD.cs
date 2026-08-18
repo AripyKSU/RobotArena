@@ -43,28 +43,64 @@ namespace Unity.FPS.UI
         bool m_FlashActive;
         float m_LastTimeFlashStarted = Mathf.NegativeInfinity;
         Health m_PlayerHealth;
-        GameFlowManager m_GameFlowManager;
+
+        void OnEnable()
+        {
+            LocalPlayerRegistry.Changed += OnLocalPlayerChanged;
+            if (LocalPlayerRegistry.Current != null)
+            {
+                OnLocalPlayerChanged(LocalPlayerRegistry.Current);
+            }
+        }
 
         void Start()
         {
-            // Subscribe to player damage events
-            PlayerCharacterController playerCharacterController = FindFirstObjectByType<PlayerCharacterController>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerCharacterController, FeedbackFlashHUD>(
-                playerCharacterController, this);
+            Health preferredHealth = LocalPlayerRegistry.Current != null
+                ? LocalPlayerRegistry.Current.GetComponent<Health>()
+                : FindFirstObjectByType<PlayerCharacterController>()?.GetComponent<Health>();
+            BindPlayerHealth(preferredHealth);
 
-            m_PlayerHealth = playerCharacterController.GetComponent<Health>();
-            DebugUtility.HandleErrorIfNullGetComponent<Health, FeedbackFlashHUD>(m_PlayerHealth, this,
-                playerCharacterController.gameObject);
+        }
 
-            m_GameFlowManager = FindFirstObjectByType<GameFlowManager>();
-            DebugUtility.HandleErrorIfNullFindObject<GameFlowManager, FeedbackFlashHUD>(m_GameFlowManager, this);
+        void OnDisable()
+        {
+            LocalPlayerRegistry.Changed -= OnLocalPlayerChanged;
+            BindPlayerHealth(null);
+        }
 
-            m_PlayerHealth.OnDamaged += OnTakeDamage;
-            m_PlayerHealth.OnHealed += OnHealed;
+        void OnLocalPlayerChanged(GameObject localPlayer)
+        {
+            BindPlayerHealth(localPlayer != null ? localPlayer.GetComponent<Health>() : null);
+        }
+
+        void BindPlayerHealth(Health playerHealth)
+        {
+            if (m_PlayerHealth == playerHealth)
+            {
+                return;
+            }
+
+            if (m_PlayerHealth != null)
+            {
+                m_PlayerHealth.OnDamaged -= OnTakeDamage;
+                m_PlayerHealth.OnHealed -= OnHealed;
+            }
+
+            m_PlayerHealth = playerHealth;
+            if (m_PlayerHealth != null)
+            {
+                m_PlayerHealth.OnDamaged += OnTakeDamage;
+                m_PlayerHealth.OnHealed += OnHealed;
+            }
         }
 
         void Update()
         {
+            if (m_PlayerHealth == null)
+            {
+                return;
+            }
+
             if (m_PlayerHealth.IsCritical())
             {
                 VignetteCanvasGroup.gameObject.SetActive(true);
@@ -72,11 +108,8 @@ namespace Unity.FPS.UI
                     (1 - (m_PlayerHealth.CurrentHealth / m_PlayerHealth.MaxHealth /
                           m_PlayerHealth.CriticalHealthRatio)) * CriticaHealthVignetteMaxAlpha;
 
-                if (m_GameFlowManager.GameIsEnding)
-                    VignetteCanvasGroup.alpha = vignetteAlpha;
-                else
-                    VignetteCanvasGroup.alpha =
-                        ((Mathf.Sin(Time.time * PulsatingVignetteFrequency) / 2) + 0.5f) * vignetteAlpha;
+                VignetteCanvasGroup.alpha =
+                    ((Mathf.Sin(Time.time * PulsatingVignetteFrequency) / 2) + 0.5f) * vignetteAlpha;
             }
             else
             {

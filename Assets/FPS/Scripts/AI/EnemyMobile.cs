@@ -181,5 +181,34 @@ namespace Unity.FPS.AI
 
             Animator.SetTrigger(k_AnimOnDamagedParameter);
         }
+
+        public void ResetForReuse()
+        {
+            AiState = AIState.Patrol;
+
+            if (Animator != null)
+            {
+                Animator.ResetTrigger(k_AnimAttackParameter);
+                Animator.ResetTrigger(k_AnimOnDamagedParameter);
+                Animator.SetBool(k_AnimAlertedParameter, false);
+                Animator.SetFloat(k_AnimMoveSpeedParameter, 0f);
+            }
+
+            if (OnDetectVfx != null)
+            {
+                foreach (ParticleSystem effect in OnDetectVfx)
+                {
+                    if (effect != null)
+                    {
+                        effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                    }
+                }
+            }
+
+            if (m_AudioSource != null && !m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play();
+            }
+        }
     }
 }

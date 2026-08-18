@@ -15,6 +15,15 @@ namespace Unity.FPS.AI
         {
             foreach (var enemy in EnemiesToAssign)
             {
+                if (enemy == null)
+                {
+                    Debug.LogWarning(
+                        $"PatrolPath '{name}' contains a missing enemy reference. " +
+                        "The missing entry will be ignored.",
+                        this);
+                    continue;
+                }
+
                 enemy.PatrolPath = this;
             }
         }
@@ -51,8 +60,15 @@ namespace Unity.FPS.AI
                     nextIndex -= PathNodes.Count;
                 }
 
-                Gizmos.DrawLine(PathNodes[i].position, PathNodes[nextIndex].position);
-                Gizmos.DrawSphere(PathNodes[i].position, 0.1f);
+                Transform currentNode = PathNodes[i];
+                Transform nextNode = PathNodes[nextIndex];
+                if (currentNode == null || nextNode == null)
+                {
+                    continue;
+                }
+
+                Gizmos.DrawLine(currentNode.position, nextNode.position);
+                Gizmos.DrawSphere(currentNode.position, 0.1f);
             }
         }
     }

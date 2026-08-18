@@ -16,11 +16,60 @@ namespace Unity.FPS.UI
         PlayerWeaponsManager m_PlayerWeaponsManager;
         List<AmmoCounter> m_AmmoCounters = new List<AmmoCounter>();
 
+        void OnEnable()
+        {
+            LocalPlayerRegistry.Changed += OnLocalPlayerChanged;
+            if (LocalPlayerRegistry.Current != null)
+            {
+                OnLocalPlayerChanged(LocalPlayerRegistry.Current);
+            }
+        }
+
         void Start()
         {
-            m_PlayerWeaponsManager = FindFirstObjectByType<PlayerWeaponsManager>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerWeaponsManager, WeaponHUDManager>(m_PlayerWeaponsManager,
-                this);
+            PlayerWeaponsManager preferredManager = LocalPlayerRegistry.Current != null
+                ? LocalPlayerRegistry.Current.GetComponent<PlayerWeaponsManager>()
+                : FindFirstObjectByType<PlayerWeaponsManager>();
+            BindPlayerWeapons(preferredManager);
+        }
+
+        void OnDisable()
+        {
+            LocalPlayerRegistry.Changed -= OnLocalPlayerChanged;
+            UnbindPlayerWeapons();
+        }
+
+        void OnLocalPlayerChanged(GameObject localPlayer)
+        {
+            BindPlayerWeapons(localPlayer != null ? localPlayer.GetComponent<PlayerWeaponsManager>() : null);
+        }
+
+        void BindPlayerWeapons(PlayerWeaponsManager weaponsManager)
+        {
+            if (m_PlayerWeaponsManager == weaponsManager)
+            {
+                return;
+            }
+
+            UnbindPlayerWeapons();
+            m_PlayerWeaponsManager = weaponsManager;
+            if (m_PlayerWeaponsManager == null)
+            {
+                return;
+            }
+
+            m_PlayerWeaponsManager.OnAddedWeapon += AddWeapon;
+            m_PlayerWeaponsManager.OnRemovedWeapon += RemoveWeapon;
+            m_PlayerWeaponsManager.OnSwitchedToWeapon += ChangeWeapon;
+
+            for (int i = 0; i < m_PlayerWeaponsManager.StartingWeapons.Count; i++)
+            {
+                WeaponController weapon = m_PlayerWeaponsManager.GetWeaponAtSlotIndex(i);
+                if (weapon != null)
+                {
+                    AddWeapon(weapon, i);
+                }
+            }
 
             WeaponController activeWeapon = m_PlayerWeaponsManager.GetActiveWeapon();
             if (activeWeapon)
@@ -28,20 +77,43 @@ namespace Unity.FPS.UI
                 AddWeapon(activeWeapon, m_PlayerWeaponsManager.ActiveWeaponIndex);
                 ChangeWeapon(activeWeapon);
             }
+        }
 
-            m_PlayerWeaponsManager.OnAddedWeapon += AddWeapon;
-            m_PlayerWeaponsManager.OnRemovedWeapon += RemoveWeapon;
-            m_PlayerWeaponsManager.OnSwitchedToWeapon += ChangeWeapon;
+        void UnbindPlayerWeapons()
+        {
+            if (m_PlayerWeaponsManager != null)
+            {
+                m_PlayerWeaponsManager.OnAddedWeapon -= AddWeapon;
+                m_PlayerWeaponsManager.OnRemovedWeapon -= RemoveWeapon;
+                m_PlayerWeaponsManager.OnSwitchedToWeapon -= ChangeWeapon;
+            }
+
+            foreach (AmmoCounter counter in m_AmmoCounters)
+            {
+                if (counter != null)
+                {
+                    Destroy(counter.gameObject);
+                }
+            }
+
+            m_AmmoCounters.Clear();
+            m_PlayerWeaponsManager = null;
         }
 
         void AddWeapon(WeaponController newWeapon, int weaponIndex)
         {
+            if (newWeapon == null || m_AmmoCounters.Exists(counter =>
+                    counter != null && counter.WeaponCounterIndex == weaponIndex))
+            {
+                return;
+            }
+
             GameObject ammoCounterInstance = Instantiate(AmmoCounterPrefab, AmmoPanel);
             AmmoCounter newAmmoCounter = ammoCounterInstance.GetComponent<AmmoCounter>();
             DebugUtility.HandleErrorIfNullGetComponent<AmmoCounter, WeaponHUDManager>(newAmmoCounter, this,
                 ammoCounterInstance.gameObject);
 
-            newAmmoCounter.Initialize(newWeapon, weaponIndex);
+            newAmmoCounter.Initialize(newWeapon, weaponIndex, m_PlayerWeaponsManager);
 
             m_AmmoCounters.Add(newAmmoCounter);
         }

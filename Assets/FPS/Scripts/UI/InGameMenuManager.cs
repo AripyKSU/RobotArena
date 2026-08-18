@@ -1,4 +1,4 @@
-﻿using Unity.FPS.Game;
+using Unity.FPS.Game;
 using Unity.FPS.Gameplay;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -24,46 +24,58 @@ namespace Unity.FPS.UI
         [Tooltip("Toggle component for invincibility")]
         public Toggle InvincibilityToggle;
 
-        [Tooltip("Toggle component for framerate display")]
-        public Toggle FramerateToggle;
-
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
 
         PlayerInputHandler m_PlayerInputsHandler;
         Health m_PlayerHealth;
-        FramerateCounter m_FramerateCounter;
         
         private InputAction m_SubmitAction;
         private InputAction m_CancelAction;
         private InputAction m_NavigateAction;
         private InputAction m_MenuAction;
 
+        void OnEnable()
+        {
+            LocalPlayerRegistry.Changed += OnLocalPlayerChanged;
+            if (LocalPlayerRegistry.Current != null)
+            {
+                BindPlayer(LocalPlayerRegistry.Current);
+            }
+        }
+
+        void OnDisable()
+        {
+            LocalPlayerRegistry.Changed -= OnLocalPlayerChanged;
+            BindPlayer(null);
+        }
+
         void Start()
         {
-            m_PlayerInputsHandler = FindFirstObjectByType<PlayerInputHandler>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerInputHandler, InGameMenuManager>(m_PlayerInputsHandler,
-                this);
+            if (m_PlayerInputsHandler == null)
+            {
+                GameObject player = LocalPlayerRegistry.Current;
+                if (player == null)
+                {
+                    PlayerInputHandler fallback = FindFirstObjectByType<PlayerInputHandler>();
+                    player = fallback != null ? fallback.gameObject : null;
+                }
 
-            m_PlayerHealth = m_PlayerInputsHandler.GetComponent<Health>();
-            DebugUtility.HandleErrorIfNullGetComponent<Health, InGameMenuManager>(m_PlayerHealth, this, gameObject);
-
-            m_FramerateCounter = FindFirstObjectByType<FramerateCounter>();
-            DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
+                BindPlayer(player);
+            }
 
             MenuRoot.SetActive(false);
 
-            LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
+            LookSensitivitySlider.value = m_PlayerInputsHandler != null
+                ? m_PlayerInputsHandler.LookSensitivity
+                : 1f;
             LookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
 
             ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
             ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
 
-            InvincibilityToggle.isOn = m_PlayerHealth.Invincible;
+            InvincibilityToggle.isOn = m_PlayerHealth != null && m_PlayerHealth.Invincible;
             InvincibilityToggle.onValueChanged.AddListener(OnInvincibilityChanged);
-
-            FramerateToggle.isOn = m_FramerateCounter.UIText.gameObject.activeSelf;
-            FramerateToggle.onValueChanged.AddListener(OnFramerateCounterChanged);
 
             m_SubmitAction = InputSystem.actions.FindAction("UI/Submit");
             m_CancelAction = InputSystem.actions.FindAction("UI/Cancel");
@@ -76,10 +88,39 @@ namespace Unity.FPS.UI
             m_MenuAction.Enable();
         }
 
+        void OnLocalPlayerChanged(GameObject localPlayer)
+        {
+            BindPlayer(localPlayer);
+        }
+
+        void BindPlayer(GameObject player)
+        {
+            m_PlayerInputsHandler = player != null ? player.GetComponent<PlayerInputHandler>() : null;
+            m_PlayerHealth = player != null ? player.GetComponent<Health>() : null;
+
+            if (m_PlayerInputsHandler != null && LookSensitivitySlider != null)
+            {
+                LookSensitivitySlider.SetValueWithoutNotify(m_PlayerInputsHandler.LookSensitivity);
+            }
+
+            if (m_PlayerHealth != null && InvincibilityToggle != null)
+            {
+                InvincibilityToggle.SetIsOnWithoutNotify(m_PlayerHealth.Invincible);
+            }
+        }
+
         void Update()
         {
+            bool forceCursorUnlocked = CursorUnlockRequest.IsActive;
+
+            if (forceCursorUnlocked && !MenuRoot.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+
             // Lock cursor when clicking outside of menu
-            if (!MenuRoot.activeSelf && Mouse.current.leftButton.wasPressedThisFrame)
+            if (!forceCursorUnlocked && !MenuRoot.activeSelf && Mouse.current.leftButton.wasPressedThisFrame)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -134,8 +175,9 @@ namespace Unity.FPS.UI
             }
             else
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                bool forceCursorUnlocked = CursorUnlockRequest.IsActive;
+                Cursor.lockState = forceCursorUnlocked ? CursorLockMode.None : CursorLockMode.Locked;
+                Cursor.visible = forceCursorUnlocked;
                 Time.timeScale = 1f;
                 AudioUtility.SetMasterVolume(1);
             }
@@ -144,7 +186,10 @@ namespace Unity.FPS.UI
 
         void OnMouseSensitivityChanged(float newValue)
         {
-            m_PlayerInputsHandler.LookSensitivity = newValue;
+            if (m_PlayerInputsHandler != null)
+            {
+                m_PlayerInputsHandler.LookSensitivity = newValue;
+            }
         }
 
         void OnShadowsChanged(bool newValue)
@@ -154,12 +199,10 @@ namespace Unity.FPS.UI
 
         void OnInvincibilityChanged(bool newValue)
         {
-            m_PlayerHealth.Invincible = newValue;
-        }
-
-        void OnFramerateCounterChanged(bool newValue)
-        {
-            m_FramerateCounter.UIText.gameObject.SetActive(newValue);
+            if (m_PlayerHealth != null)
+            {
+                m_PlayerHealth.Invincible = newValue;
+            }
         }
 
         public void OnShowControlButtonClicked(bool show)
@@ -168,3 +211,5 @@ namespace Unity.FPS.UI
         }
     }
 }
+
+

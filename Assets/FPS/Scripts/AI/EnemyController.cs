@@ -35,6 +35,9 @@ namespace Unity.FPS.AI
         [Tooltip("Delay after death where the GameObject is destroyed (to allow for animation)")]
         public float DeathDuration = 0f;
 
+        [System.NonSerialized]
+        public bool ExternalDeathHandling;
+
 
         [Header("Weapons Parameters")] [Tooltip("Allow weapon swapping for this enemy")]
         public bool SwapToNextWeapon = false;
@@ -121,12 +124,18 @@ namespace Unity.FPS.AI
         void Start()
         {
             m_EnemyManager = FindAnyObjectByType<EnemyManager>();
-            DebugUtility.HandleErrorIfNullFindObject<EnemyManager, EnemyController>(m_EnemyManager, this);
+            if (!ExternalDeathHandling)
+            {
+                DebugUtility.HandleErrorIfNullFindObject<EnemyManager, EnemyController>(m_EnemyManager, this);
+            }
 
             m_ActorsManager = FindAnyObjectByType<ActorsManager>();
             DebugUtility.HandleErrorIfNullFindObject<ActorsManager, EnemyController>(m_ActorsManager, this);
 
-            m_EnemyManager.RegisterEnemy(this);
+            if (!ExternalDeathHandling && m_EnemyManager != null)
+            {
+                m_EnemyManager.RegisterEnemy(this);
+            }
 
             m_Health = GetComponent<Health>();
             DebugUtility.HandleErrorIfNullGetComponent<Health, EnemyController>(m_Health, this, gameObject);
@@ -138,7 +147,10 @@ namespace Unity.FPS.AI
             m_SelfColliders = GetComponentsInChildren<Collider>();
 
             m_GameFlowManager = FindAnyObjectByType<GameFlowManager>();
-            DebugUtility.HandleErrorIfNullFindObject<GameFlowManager, EnemyController>(m_GameFlowManager, this);
+            if (!ExternalDeathHandling)
+            {
+                DebugUtility.HandleErrorIfNullFindObject<GameFlowManager, EnemyController>(m_GameFlowManager, this);
+            }
 
             // Subscribe to damage & death actions
             m_Health.OnDie += OnDie;
@@ -221,7 +233,15 @@ namespace Unity.FPS.AI
             // at every frame, this tests for conditions to kill the enemy
             if (transform.position.y < SelfDestructYHeight)
             {
-                Destroy(gameObject);
+                if (ExternalDeathHandling && m_Health != null)
+                {
+                    m_Health.Kill();
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+
                 return;
             }
         }
@@ -359,12 +379,20 @@ namespace Unity.FPS.AI
 
         void OnDie()
         {
+            if (ExternalDeathHandling)
+            {
+                return;
+            }
+
             // spawn a particle system when dying
             var vfx = Instantiate(DeathVfx, DeathVfxSpawnPoint.position, Quaternion.identity);
             Destroy(vfx, 5f);
 
             // tells the game flow manager to handle the enemy destuction
-            m_EnemyManager.UnregisterEnemy(this);
+            if (m_EnemyManager != null)
+            {
+                m_EnemyManager.UnregisterEnemy(this);
+            }
 
             // loot an object
             if (TryDropItem())
@@ -406,7 +434,7 @@ namespace Unity.FPS.AI
 
         public bool TryAtack(Vector3 enemyPosition)
         {
-            if (m_GameFlowManager.GameIsEnding)
+            if (m_GameFlowManager != null && m_GameFlowManager.GameIsEnding)
                 return false;
 
             OrientWeaponsTowards(enemyPosition);
@@ -484,6 +512,40 @@ namespace Unity.FPS.AI
             else
             {
                 m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
+            }
+        }
+
+        public void ResetForReuse()
+        {
+            m_WasDamagedThisFrame = false;
+            m_LastTimeDamaged = Mathf.NegativeInfinity;
+            m_CurrentWeaponIndex = 0;
+            m_CurrentWeapon = null;
+            m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
+
+            DetectionModule?.ResetDetection();
+            ResetPathDestination();
+            SetPathDestinationToClosestNode();
+
+            if (NavMeshAgent != null && NavMeshAgent.isOnNavMesh)
+            {
+                NavMeshAgent.ResetPath();
+            }
+
+            FindAndInitializeAllWeapons();
+            foreach (WeaponController weapon in m_Weapons)
+            {
+                weapon.ResetForReuse();
+            }
+
+            GetCurrentWeapon().ShowWeapon(true);
+
+            if (m_EyeRendererData.Renderer != null && m_EyeColorMaterialPropertyBlock != null)
+            {
+                m_EyeColorMaterialPropertyBlock.SetColor("_EmissionColor", DefaultEyeColor);
+                m_EyeRendererData.Renderer.SetPropertyBlock(
+                    m_EyeColorMaterialPropertyBlock,
+                    m_EyeRendererData.MaterialIndex);
             }
         }
     }

@@ -65,13 +65,28 @@ namespace Unity.FPS.AI
                         // Check for obstructions
                         RaycastHit[] hits = Physics.RaycastAll(DetectionSourcePoint.position,
                             (otherActor.AimPoint.position - DetectionSourcePoint.position).normalized, DetectionRange,
-                            -1, QueryTriggerInteraction.Ignore);
+                            -1, QueryTriggerInteraction.Collide);
                         RaycastHit closestValidHit = new RaycastHit();
                         closestValidHit.distance = Mathf.Infinity;
                         bool foundValidHit = false;
                         foreach (var hit in hits)
                         {
-                            if (!selfColliders.Contains(hit.collider) && hit.distance < closestValidHit.distance)
+                            if (selfColliders.Contains(hit.collider))
+                            {
+                                continue;
+                            }
+
+                            // Remote network players keep a trigger hitbox active while their
+                            // owner-driven CharacterController is disabled on the server. Actor
+                            // triggers are valid visibility targets; unrelated trigger volumes
+                            // must not block line of sight.
+                            Actor hitActor = hit.collider.GetComponentInParent<Actor>();
+                            if (hit.collider.isTrigger && hitActor == null)
+                            {
+                                continue;
+                            }
+
+                            if (hit.distance < closestValidHit.distance)
                             {
                                 closestValidHit = hit;
                                 foundValidHit = true;
@@ -135,6 +150,21 @@ namespace Unity.FPS.AI
             if (Animator)
             {
                 Animator.SetTrigger(k_AnimAttackParameter);
+            }
+        }
+
+        public virtual void ResetDetection()
+        {
+            KnownDetectedTarget = null;
+            IsTargetInAttackRange = false;
+            IsSeeingTarget = false;
+            HadKnownTarget = false;
+            TimeLastSeenTarget = Mathf.NegativeInfinity;
+
+            if (Animator)
+            {
+                Animator.ResetTrigger(k_AnimAttackParameter);
+                Animator.ResetTrigger(k_AnimOnDamagedParameter);
             }
         }
     }

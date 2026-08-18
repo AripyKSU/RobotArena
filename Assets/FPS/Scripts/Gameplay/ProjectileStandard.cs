@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using Unity.FPS.Game;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace Unity.FPS.Gameplay
 {
     public class ProjectileStandard : ProjectileBase
     {
+        public static event Action<ProjectileStandard, Vector3, Vector3> AnyImpact;
+
         [Header("General")] [Tooltip("Radius of this projectile's collision detection")]
         public float Radius = 0.01f;
 
@@ -222,6 +225,8 @@ namespace Unity.FPS.Gameplay
 
         void OnHit(Vector3 point, Vector3 normal, Collider collider)
         {
+            AnyImpact?.Invoke(this, point, normal);
+
             // damage
             if (AreaOfDamage)
             {

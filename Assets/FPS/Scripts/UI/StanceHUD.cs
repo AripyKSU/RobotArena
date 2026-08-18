@@ -16,13 +16,61 @@ namespace Unity.FPS.UI
         [Tooltip("Sprite to display when crouching")]
         public Sprite CrouchingSprite;
 
+        PlayerCharacterController m_Character;
+
+        void OnEnable()
+        {
+            LocalPlayerRegistry.Changed += OnLocalPlayerChanged;
+            if (LocalPlayerRegistry.Current != null)
+            {
+                BindCharacter(LocalPlayerRegistry.Current.GetComponent<PlayerCharacterController>());
+            }
+        }
+
         void Start()
         {
-            PlayerCharacterController character = FindFirstObjectByType<PlayerCharacterController>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerCharacterController, StanceHUD>(character, this);
-            character.OnStanceChanged += OnStanceChanged;
+            if (m_Character == null)
+            {
+                PlayerCharacterController character = LocalPlayerRegistry.Current != null
+                    ? LocalPlayerRegistry.Current.GetComponent<PlayerCharacterController>()
+                    : FindFirstObjectByType<PlayerCharacterController>();
+                BindCharacter(character);
+            }
+        }
 
-            OnStanceChanged(character.IsCrouching);
+        void OnDisable()
+        {
+            LocalPlayerRegistry.Changed -= OnLocalPlayerChanged;
+            BindCharacter(null);
+        }
+
+        void OnLocalPlayerChanged(GameObject localPlayer)
+        {
+            BindCharacter(localPlayer != null
+                ? localPlayer.GetComponent<PlayerCharacterController>()
+                : null);
+        }
+
+        void BindCharacter(PlayerCharacterController character)
+        {
+            if (m_Character == character)
+            {
+                return;
+            }
+
+            if (m_Character != null)
+            {
+                m_Character.OnStanceChanged -= OnStanceChanged;
+            }
+
+            m_Character = character;
+            if (m_Character == null)
+            {
+                return;
+            }
+
+            m_Character.OnStanceChanged += OnStanceChanged;
+            OnStanceChanged(m_Character.IsCrouching);
         }
 
         void OnStanceChanged(bool crouched)

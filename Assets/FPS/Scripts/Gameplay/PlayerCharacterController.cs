@@ -220,10 +220,19 @@ namespace Unity.FPS.Gameplay
         {
             IsDead = true;
 
-            // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon
-            m_WeaponsManager.SwitchToWeaponIndex(-1, true);
+            m_WeaponsManager.SetRespawnLocked(true);
 
             EventManager.Broadcast(Events.PlayerDeathEvent);
+        }
+
+        public void Revive()
+        {
+            IsDead = false;
+            CharacterVelocity = Vector3.zero;
+            m_LatestImpactSpeed = Vector3.zero;
+            HasJumpedThisFrame = false;
+            SetCrouchingState(false, true);
+            UpdateCharacterHeight(true);
         }
 
         void GroundCheck()

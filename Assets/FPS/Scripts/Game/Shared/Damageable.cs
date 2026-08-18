@@ -4,6 +4,10 @@ namespace Unity.FPS.Game
 {
     public class Damageable : MonoBehaviour
     {
+        // Multiplayer adapters can consume a client-side damage candidate without making the
+        // original FPS assembly depend on a networking assembly.
+        public static System.Func<Damageable, float, bool, GameObject, bool> TryHandleNetworkDamage;
+
         [Tooltip("Multiplier to apply to the received damage")]
         public float DamageMultiplier = 1f;
 
@@ -26,6 +30,12 @@ namespace Unity.FPS.Game
         {
             if (Health)
             {
+                if (TryHandleNetworkDamage != null &&
+                    TryHandleNetworkDamage.Invoke(this, damage, isExplosionDamage, damageSource))
+                {
+                    return;
+                }
+
                 var totalDamage = damage;
 
                 // skip the crit multiplier if it's from an explosion

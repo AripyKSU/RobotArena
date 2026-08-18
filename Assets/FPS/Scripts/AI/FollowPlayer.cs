@@ -10,21 +10,37 @@ namespace Unity.FPS.AI
 
         void Start()
         {
-            ActorsManager actorsManager = FindAnyObjectByType<ActorsManager>();
-            if (actorsManager != null)
-                m_PlayerTransform = actorsManager.Player.transform;
-            else
-            {
-                enabled = false;
-                return;
-            }
-
-            m_OriginalOffset = transform.position - m_PlayerTransform.position;
+            TryBindPlayer();
         }
 
         void LateUpdate()
         {
+            // A network player can replace the scene's offline Player after MainScene has
+            // loaded.  Reacquire the current actor instead of holding a destroyed transform.
+            if (m_PlayerTransform == null)
+            {
+                if (!TryBindPlayer())
+                    return;
+            }
+
             transform.position = m_PlayerTransform.position + m_OriginalOffset;
+        }
+
+        bool TryBindPlayer()
+        {
+            GameObject player = LocalPlayerRegistry.Current;
+            if (player == null)
+            {
+                ActorsManager actorsManager = FindAnyObjectByType<ActorsManager>();
+                player = actorsManager != null ? actorsManager.Player : null;
+            }
+
+            if (player == null)
+                return false;
+
+            m_PlayerTransform = player.transform;
+            m_OriginalOffset = transform.position - m_PlayerTransform.position;
+            return true;
         }
     }
 }

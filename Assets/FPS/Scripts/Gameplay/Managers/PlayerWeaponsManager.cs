@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
@@ -92,6 +92,8 @@ namespace Unity.FPS.Gameplay
         float m_TimeStartedWeaponSwitch;
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
+        int m_PreferredWeaponIndex = -1;
+        bool m_IsRespawnLocked;
 
         void Start()
         {
@@ -265,6 +267,66 @@ namespace Unity.FPS.Gameplay
             }
         }
 
+        public void SetRespawnLocked(bool locked)
+        {
+            m_IsRespawnLocked = locked;
+            IsAiming = false;
+            m_WeaponBobFactor = 0f;
+            m_WeaponBobLocalPosition = Vector3.zero;
+            m_WeaponRecoilLocalPosition = Vector3.zero;
+            m_AccumulatedRecoil = Vector3.zero;
+
+            foreach (WeaponController weapon in m_WeaponSlots)
+            {
+                if (weapon == null)
+                {
+                    continue;
+                }
+
+                weapon.HandleShootInputs(false, false, false);
+                weapon.ShowWeapon(false);
+            }
+
+            if (locked)
+            {
+                m_WeaponSwitchState = WeaponSwitchState.Down;
+                m_WeaponSwitchNewWeaponIndex = -1;
+                return;
+            }
+
+            int restoredWeaponIndex = GetWeaponAtSlotIndex(m_PreferredWeaponIndex) != null
+                ? m_PreferredWeaponIndex
+                : ActiveWeaponIndex;
+            if (GetWeaponAtSlotIndex(restoredWeaponIndex) == null)
+            {
+                restoredWeaponIndex = -1;
+                for (int i = 0; i < m_WeaponSlots.Length; i++)
+                {
+                    if (m_WeaponSlots[i] != null)
+                    {
+                        restoredWeaponIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            ActiveWeaponIndex = restoredWeaponIndex;
+            m_WeaponSwitchNewWeaponIndex = restoredWeaponIndex;
+            m_WeaponSwitchState = restoredWeaponIndex >= 0
+                ? WeaponSwitchState.Up
+                : WeaponSwitchState.Down;
+            m_WeaponMainLocalPosition = DefaultWeaponPosition.localPosition;
+            m_TimeStartedWeaponSwitch = Time.time;
+            SetFov(DefaultFov);
+
+            WeaponController restoredWeapon = GetActiveWeapon();
+            if (restoredWeapon != null)
+            {
+                restoredWeapon.ShowWeapon(true);
+                OnSwitchedToWeapon?.Invoke(restoredWeapon);
+            }
+        }
+
         public WeaponController HasWeapon(WeaponController weaponPrefab)
         {
             // Checks if we already have a weapon coming from the specified prefab
@@ -278,6 +340,111 @@ namespace Unity.FPS.Gameplay
             }
 
             return null;
+        }
+
+        public bool EnsureWeapon(
+            WeaponController weaponPrefab,
+            out WeaponController weaponInstance,
+            out int slotIndex)
+        {
+            weaponInstance = null;
+            slotIndex = -1;
+            if (weaponPrefab == null)
+            {
+                return false;
+            }
+
+            weaponInstance = HasWeapon(weaponPrefab);
+            if (weaponInstance == null)
+            {
+                if (!AddWeapon(weaponPrefab))
+                {
+                    return false;
+                }
+
+                weaponInstance = HasWeapon(weaponPrefab);
+            }
+
+            for (int i = 0; i < m_WeaponSlots.Length; i++)
+            {
+                if (m_WeaponSlots[i] == weaponInstance)
+                {
+                    slotIndex = i;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool EquipExclusiveWeapon(WeaponController weaponPrefab)
+        {
+            if (weaponPrefab == null)
+            {
+                return false;
+            }
+
+            WeaponController selectedWeapon = HasWeapon(weaponPrefab);
+            bool removedActiveWeapon = false;
+
+            for (int i = 0; i < m_WeaponSlots.Length; i++)
+            {
+                WeaponController weapon = m_WeaponSlots[i];
+                if (weapon == null || weapon == selectedWeapon)
+                {
+                    continue;
+                }
+
+                removedActiveWeapon |= i == ActiveWeaponIndex;
+                m_WeaponSlots[i] = null;
+                OnRemovedWeapon?.Invoke(weapon, i);
+                weapon.ShowWeapon(false);
+                Destroy(weapon.gameObject);
+            }
+
+            if (removedActiveWeapon)
+            {
+                ActiveWeaponIndex = -1;
+                m_WeaponSwitchNewWeaponIndex = -1;
+                m_WeaponSwitchState = WeaponSwitchState.Down;
+            }
+
+            if (selectedWeapon == null)
+            {
+                if (!AddWeapon(weaponPrefab))
+                {
+                    return false;
+                }
+
+                selectedWeapon = HasWeapon(weaponPrefab);
+            }
+
+            for (int i = 0; i < m_WeaponSlots.Length; i++)
+            {
+                if (m_WeaponSlots[i] != selectedWeapon)
+                {
+                    continue;
+                }
+
+                SetPreferredWeaponIndex(i);
+                return true;
+            }
+
+            return false;
+        }
+
+        public void SetPreferredWeaponIndex(int slotIndex)
+        {
+            if (GetWeaponAtSlotIndex(slotIndex) == null)
+            {
+                return;
+            }
+
+            m_PreferredWeaponIndex = slotIndex;
+            if (!m_IsRespawnLocked && isActiveAndEnabled)
+            {
+                SwitchToWeaponIndex(slotIndex, true);
+            }
         }
 
         // Updates weapon position and camera FoV for the aiming transition
@@ -558,3 +725,4 @@ namespace Unity.FPS.Gameplay
         }
     }
 }
+

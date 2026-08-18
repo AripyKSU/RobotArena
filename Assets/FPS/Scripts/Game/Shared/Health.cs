@@ -23,9 +23,47 @@ namespace Unity.FPS.Game
 
         bool m_IsDead;
 
-        void Start()
+        void Awake()
         {
             CurrentHealth = MaxHealth;
+        }
+
+        public void ApplyNetworkState(float health, GameObject damageSource = null)
+        {
+            float healthBefore = CurrentHealth;
+            CurrentHealth = Mathf.Clamp(health, 0f, MaxHealth);
+
+            float delta = CurrentHealth - healthBefore;
+            if (delta < 0f)
+            {
+                OnDamaged?.Invoke(-delta, damageSource);
+            }
+            else if (delta > 0f)
+            {
+                OnHealed?.Invoke(delta);
+            }
+
+            if (CurrentHealth > 0f)
+            {
+                m_IsDead = false;
+            }
+            else
+            {
+                HandleDeath();
+            }
+        }
+
+        public void Revive()
+        {
+            float healthBefore = CurrentHealth;
+            m_IsDead = false;
+            CurrentHealth = MaxHealth;
+
+            float healedAmount = CurrentHealth - healthBefore;
+            if (healedAmount > 0f)
+            {
+                OnHealed?.Invoke(healedAmount);
+            }
         }
 
         public void Heal(float healAmount)

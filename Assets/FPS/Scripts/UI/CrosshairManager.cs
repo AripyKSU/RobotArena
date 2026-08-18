@@ -18,18 +18,69 @@ namespace Unity.FPS.UI
         CrosshairData m_CrosshairDataTarget;
         CrosshairData m_CurrentCrosshair;
 
+        void OnEnable()
+        {
+            LocalPlayerRegistry.Changed += OnLocalPlayerChanged;
+            if (LocalPlayerRegistry.Current != null)
+            {
+                BindWeaponsManager(LocalPlayerRegistry.Current.GetComponent<PlayerWeaponsManager>());
+            }
+        }
+
         void Start()
         {
-            m_WeaponsManager = FindFirstObjectByType<PlayerWeaponsManager>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerWeaponsManager, CrosshairManager>(m_WeaponsManager, this);
+            if (m_WeaponsManager == null)
+            {
+                PlayerWeaponsManager manager = LocalPlayerRegistry.Current != null
+                    ? LocalPlayerRegistry.Current.GetComponent<PlayerWeaponsManager>()
+                    : FindFirstObjectByType<PlayerWeaponsManager>();
+                BindWeaponsManager(manager);
+            }
+        }
+
+        void OnDisable()
+        {
+            LocalPlayerRegistry.Changed -= OnLocalPlayerChanged;
+            BindWeaponsManager(null);
+        }
+
+        void OnLocalPlayerChanged(GameObject localPlayer)
+        {
+            BindWeaponsManager(localPlayer != null
+                ? localPlayer.GetComponent<PlayerWeaponsManager>()
+                : null);
+        }
+
+        void BindWeaponsManager(PlayerWeaponsManager manager)
+        {
+            if (m_WeaponsManager == manager)
+            {
+                return;
+            }
+
+            if (m_WeaponsManager != null)
+            {
+                m_WeaponsManager.OnSwitchedToWeapon -= OnWeaponChanged;
+            }
+
+            m_WeaponsManager = manager;
+            if (m_WeaponsManager == null)
+            {
+                CrosshairImage.enabled = false;
+                return;
+            }
 
             OnWeaponChanged(m_WeaponsManager.GetActiveWeapon());
-
             m_WeaponsManager.OnSwitchedToWeapon += OnWeaponChanged;
         }
 
         void Update()
         {
+            if (m_WeaponsManager == null)
+            {
+                return;
+            }
+
             UpdateCrosshairPointingAtEnemy(false);
             m_WasPointingAtEnemy = m_WeaponsManager.IsPointingAtEnemy;
         }

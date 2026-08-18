@@ -132,6 +132,7 @@ namespace Unity.FPS.Game
 
         public UnityAction OnShoot;
         public event Action OnShootProcessed;
+        public event Action<Vector3, Vector3> OnProjectileFired;
 
         int m_CarriedPhysicalBullets;
         float m_CurrentAmmo;
@@ -450,6 +451,7 @@ namespace Unity.FPS.Game
                 ProjectileBase newProjectile = Instantiate(ProjectilePrefab, WeaponMuzzle.position,
                     Quaternion.LookRotation(shotDirection));
                 newProjectile.Shoot(this);
+                OnProjectileFired?.Invoke(WeaponMuzzle.position, shotDirection);
             }
 
             // muzzle flash
@@ -497,6 +499,30 @@ namespace Unity.FPS.Game
                 spreadAngleRatio);
 
             return spreadWorldDirection;
+        }
+
+        public void ResetForReuse()
+        {
+            m_CurrentAmmo = MaxAmmo;
+            m_CarriedPhysicalBullets = HasPhysicalBullets ? ClipSize : 0;
+            m_LastTimeShot = Mathf.NegativeInfinity;
+            m_WantsToShoot = false;
+            IsCharging = false;
+            IsReloading = false;
+            IsCooling = false;
+            CurrentCharge = 0f;
+            CurrentAmmoRatio = 1f;
+            LastChargeTriggerTimestamp = 0f;
+
+            if (m_ContinuousShootAudioSource != null)
+            {
+                m_ContinuousShootAudioSource.Stop();
+            }
+
+            if (WeaponAnimator != null)
+            {
+                WeaponAnimator.ResetTrigger(k_AnimAttackParameter);
+            }
         }
     }
 }

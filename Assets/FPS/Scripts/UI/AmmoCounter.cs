@@ -55,13 +55,16 @@ namespace Unity.FPS.UI
 
         void OnAmmoPickup(AmmoPickupEvent evt)
         {
-            if (evt.Weapon == m_Weapon)
+            if (m_Weapon != null && evt.Weapon == m_Weapon)
             {
                 BulletCounter.text = m_Weapon.GetCarriedPhysicalBullets().ToString();
             }
         }
 
-        public void Initialize(WeaponController weapon, int weaponIndex)
+        public void Initialize(
+            WeaponController weapon,
+            int weaponIndex,
+            PlayerWeaponsManager playerWeaponsManager)
         {
             m_Weapon = weapon;
             WeaponCounterIndex = weaponIndex;
@@ -72,8 +75,7 @@ namespace Unity.FPS.UI
                 BulletCounter.text = weapon.GetCarriedPhysicalBullets().ToString();
 
             Reload.gameObject.SetActive(false);
-            m_PlayerWeaponsManager = FindFirstObjectByType<PlayerWeaponsManager>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerWeaponsManager, AmmoCounter>(m_PlayerWeaponsManager, this);
+            m_PlayerWeaponsManager = playerWeaponsManager;
 
             WeaponIndexText.text = (WeaponCounterIndex + 1).ToString();
 
@@ -82,6 +84,11 @@ namespace Unity.FPS.UI
 
         void Update()
         {
+            if (m_Weapon == null || m_PlayerWeaponsManager == null)
+            {
+                return;
+            }
+
             float currenFillRatio = m_Weapon.CurrentAmmoRatio;
             AmmoFillImage.fillAmount = Mathf.Lerp(AmmoFillImage.fillAmount, currenFillRatio,
                 Time.deltaTime * AmmoFillMovementSharpness);
@@ -101,7 +108,7 @@ namespace Unity.FPS.UI
             Reload.gameObject.SetActive(m_Weapon.GetCarriedPhysicalBullets() > 0 && m_Weapon.GetCurrentAmmo() == 0 && m_Weapon.IsWeaponActive);
         }
 
-        void Destroy()
+        void OnDestroy()
         {
             EventManager.RemoveListener<AmmoPickupEvent>(OnAmmoPickup);
         }
