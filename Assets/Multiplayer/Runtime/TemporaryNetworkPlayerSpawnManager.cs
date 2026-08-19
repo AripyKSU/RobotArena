@@ -21,7 +21,7 @@ namespace FPSBasic.Multiplayer
 
         private readonly HashSet<ulong> _spawnedClientIds = new();
         private readonly HashSet<ulong> _expectedClientIds = new();
-        private bool _subscribed;
+        private NetworkSceneManager _subscribedSceneManager;
         private Coroutine _spawnRoutine;
 
         private void Start()
@@ -34,10 +34,9 @@ namespace FPSBasic.Multiplayer
         {
             // NetworkSceneManager is created only after NGO starts listening. Start() normally
             // runs earlier in StartScene, so retry until the synchronized scene event is available.
-            if (!_subscribed)
-            {
-                Subscribe();
-            }
+            // NGO creates a new NetworkSceneManager after shutdown/restart, so also rebind when
+            // the instance changes between rooms in the same play session.
+            Subscribe();
         }
 
         private void OnDestroy()
@@ -49,25 +48,33 @@ namespace FPSBasic.Multiplayer
         private void Subscribe()
         {
             NetworkManager networkManager = NetworkManager.Singleton;
-            if (_subscribed || networkManager == null || networkManager.SceneManager == null)
+            NetworkSceneManager currentSceneManager = networkManager != null
+                ? networkManager.SceneManager
+                : null;
+            if (ReferenceEquals(_subscribedSceneManager, currentSceneManager))
             {
                 return;
             }
 
-            networkManager.SceneManager.OnLoadEventCompleted += OnLoadEventCompleted;
-            _subscribed = true;
+            Unsubscribe();
+            if (currentSceneManager == null)
+            {
+                return;
+            }
+
+            currentSceneManager.OnLoadEventCompleted += OnLoadEventCompleted;
+            _subscribedSceneManager = currentSceneManager;
         }
 
         private void Unsubscribe()
         {
-            NetworkManager networkManager = NetworkManager.Singleton;
-            if (!_subscribed || networkManager == null || networkManager.SceneManager == null)
+            if (_subscribedSceneManager == null)
             {
                 return;
             }
 
-            networkManager.SceneManager.OnLoadEventCompleted -= OnLoadEventCompleted;
-            _subscribed = false;
+            _subscribedSceneManager.OnLoadEventCompleted -= OnLoadEventCompleted;
+            _subscribedSceneManager = null;
         }
 
         private void OnLoadEventCompleted(

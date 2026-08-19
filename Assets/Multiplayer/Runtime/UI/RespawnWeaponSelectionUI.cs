@@ -102,21 +102,24 @@ namespace FPSBasic.Multiplayer.Weapons
             panelRect.anchorMin = panelRect.anchorMax = new Vector2(1f, 0.5f);
             panelRect.pivot = new Vector2(1f, 0.5f);
             panelRect.anchoredPosition = new Vector2(-70f, 0f);
-            panelRect.sizeDelta = new Vector2(420f, 270f);
+            panelRect.sizeDelta = new Vector2(420f, 450f);
 
             Image panelImage = panelObject.AddComponent<Image>();
             panelImage.color = new Color(0.025f, 0.04f, 0.065f, 0.94f);
 
             TMP_Text title = CreateText("Title", panelRect, "WEAPON SHOP", 30f, TextAlignmentOptions.Center);
-            SetRect(title.rectTransform, new Vector2(0f, 94f), new Vector2(380f, 42f));
+            SetRect(title.rectTransform, new Vector2(0f, 182f), new Vector2(380f, 42f));
 
-            CreateRow(panelRect, WeaponId.Blaster, "Blaster", 42f);
-            CreateRow(panelRect, WeaponId.Launcher, "Launcher", -14f);
-            CreateRow(panelRect, WeaponId.Shotgun, "Shotgun", -70f);
+            CreateRow(panelRect, WeaponId.Blaster, "Blaster", 126f);
+            CreateRow(panelRect, WeaponId.Shotgun, "Shotgun", 72f);
+            CreateRow(panelRect, WeaponId.Launcher, "Launcher", 18f);
+            CreateRow(panelRect, WeaponId.Vaporizer, "Vaporizer", -36f);
+            CreateRow(panelRect, WeaponId.SniperRifle, "Sniper Rifle", -90f);
+            CreateRow(panelRect, WeaponId.Fireballer, "Fireballer", -144f);
 
             _message = CreateText("Message", panelRect, string.Empty, 18f, TextAlignmentOptions.Center);
             _message.color = new Color(1f, 0.7f, 0.25f, 1f);
-            SetRect(_message.rectTransform, new Vector2(0f, -112f), new Vector2(380f, 30f));
+            SetRect(_message.rectTransform, new Vector2(0f, -192f), new Vector2(380f, 30f));
         }
 
         private void CreateRow(

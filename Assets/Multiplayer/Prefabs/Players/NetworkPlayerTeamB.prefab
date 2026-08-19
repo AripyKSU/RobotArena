@@ -360,6 +360,12 @@ MonoBehaviour:
     type: 3}
   shotgunPrefab: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333,
     type: 3}
+  sniperRiflePrefab: {fileID: 8323776800172828795, guid: a3d20718f5f4f9147b1a38a1d1821ad2,
+    type: 3}
+  vaporizerPrefab: {fileID: 7030608076611932811, guid: 309c2f522237008469f37d1c741e940c,
+    type: 3}
+  fireballerPrefab: {fileID: 8323776800172828795, guid: 7f3830f66f76b2b49a41ab412cce8f96,
+    type: 3}
 --- !u!114 &6590633438450934086
 MonoBehaviour:
   m_ObjectHideFlags: 0

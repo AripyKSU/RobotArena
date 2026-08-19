@@ -44,6 +44,8 @@ namespace FPSBasic.Multiplayer.UI
 
         private void OnDestroy()
         {
+            CursorUnlockRequest.SetPriorityActive(false);
+
             if (_resultCanvasObject != null)
             {
                 Destroy(_resultCanvasObject);
@@ -70,7 +72,7 @@ namespace FPSBasic.Multiplayer.UI
             CreateResultCanvas(resultSprite);
             DisableGameplayCanvases();
 
-            CursorUnlockRequest.SetActive(true);
+            CursorUnlockRequest.SetPriorityActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
@@ -218,7 +220,7 @@ namespace FPSBasic.Multiplayer.UI
                 await WaitForDestroyedObjectAsync(bootstrapRoot);
             }
 
-            CursorUnlockRequest.SetActive(false);
+            CursorUnlockRequest.SetPriorityActive(false);
             SceneManager.LoadScene(TitleSceneName, LoadSceneMode.Single);
         }
 

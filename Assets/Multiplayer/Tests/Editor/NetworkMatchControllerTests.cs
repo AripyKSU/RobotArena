@@ -1,6 +1,7 @@
 using FPSBasic.Multiplayer.UI;
 using NUnit.Framework;
 using TMPro;
+using Unity.FPS.Game;
 using UnityEditor;
 using UnityEngine;
 
@@ -75,6 +76,31 @@ namespace FPSBasic.Multiplayer.Tests
             Assert.IsNotNull(serializedScreen.FindProperty("redWinSprite").objectReferenceValue);
             Assert.IsNotNull(serializedScreen.FindProperty("blueWinSprite").objectReferenceValue);
             Assert.IsNotNull(serializedScreen.FindProperty("drawSprite").objectReferenceValue);
+        }
+
+        [Test]
+        public void CursorUnlockRequest_PrioritySurvivesNormalRelease()
+        {
+            CursorUnlockRequest.SetActive(false);
+            CursorUnlockRequest.SetPriorityActive(false);
+
+            try
+            {
+                CursorUnlockRequest.SetActive(true);
+                CursorUnlockRequest.SetPriorityActive(true);
+
+                CursorUnlockRequest.SetActive(false);
+
+                Assert.IsTrue(CursorUnlockRequest.IsActive);
+
+                CursorUnlockRequest.SetPriorityActive(false);
+                Assert.IsFalse(CursorUnlockRequest.IsActive);
+            }
+            finally
+            {
+                CursorUnlockRequest.SetActive(false);
+                CursorUnlockRequest.SetPriorityActive(false);
+            }
         }
     }
 }

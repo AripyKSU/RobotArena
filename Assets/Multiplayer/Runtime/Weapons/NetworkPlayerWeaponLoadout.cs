@@ -9,8 +9,11 @@ namespace FPSBasic.Multiplayer.Weapons
     public enum WeaponId : byte
     {
         Blaster = 0,
-        Launcher = 1,
-        Shotgun = 2
+        Shotgun = 1,
+        Launcher = 2,
+        Vaporizer = 3,
+        SniperRifle = 4,
+        Fireballer = 5
     }
 
     public enum WeaponSelectionResult : byte
@@ -29,10 +32,21 @@ namespace FPSBasic.Multiplayer.Weapons
     {
         private const byte BlasterMask = 1 << (int)WeaponId.Blaster;
 
+        // Change weapon prices here after playtesting.
+        private const int BlasterPrice = 0;
+        private const int ShotgunPrice = 15;
+        private const int LauncherPrice = 15;
+        private const int VaporizerPrice = 30;
+        private const int SniperRiflePrice = 45;
+        private const int FireballerPrice = 60;
+
         [Header("Weapon Prefabs")]
         [SerializeField] private WeaponController blasterPrefab;
         [SerializeField] private WeaponController launcherPrefab;
         [SerializeField] private WeaponController shotgunPrefab;
+        [SerializeField] private WeaponController vaporizerPrefab;
+        [SerializeField] private WeaponController sniperRiflePrefab;
+        [SerializeField] private WeaponController fireballerPrefab;
 
         public readonly NetworkVariable<byte> OwnedWeapons = new(
             BlasterMask,
@@ -86,9 +100,12 @@ namespace FPSBasic.Multiplayer.Weapons
         {
             return weaponId switch
             {
-                WeaponId.Blaster => 0,
-                WeaponId.Launcher => 15,
-                WeaponId.Shotgun => 30,
+                WeaponId.Blaster => BlasterPrice,
+                WeaponId.Shotgun => ShotgunPrice,
+                WeaponId.Launcher => LauncherPrice,
+                WeaponId.Vaporizer => VaporizerPrice,
+                WeaponId.SniperRifle => SniperRiflePrice,
+                WeaponId.Fireballer => FireballerPrice,
                 _ => int.MaxValue
             };
         }
@@ -98,8 +115,11 @@ namespace FPSBasic.Multiplayer.Weapons
             return weaponId switch
             {
                 WeaponId.Blaster => blasterPrefab,
-                WeaponId.Launcher => launcherPrefab,
                 WeaponId.Shotgun => shotgunPrefab,
+                WeaponId.Launcher => launcherPrefab,
+                WeaponId.Vaporizer => vaporizerPrefab,
+                WeaponId.SniperRifle => sniperRiflePrefab,
+                WeaponId.Fireballer => fireballerPrefab,
                 _ => null
             };
         }
@@ -132,7 +152,7 @@ namespace FPSBasic.Multiplayer.Weapons
             if (!IsOwned(weaponId))
             {
                 int price = GetPrice(weaponId);
-                if (_wallet == null || !_wallet.ServerTrySpend(price))
+                if (price > 0 && (_wallet == null || !_wallet.ServerTrySpend(price)))
                 {
                     SendSelectionResult(WeaponSelectionResult.InsufficientGold);
                     return;
@@ -181,7 +201,12 @@ namespace FPSBasic.Multiplayer.Weapons
 
         private static bool IsValidWeapon(WeaponId weaponId)
         {
-            return weaponId is WeaponId.Blaster or WeaponId.Launcher or WeaponId.Shotgun;
+            return weaponId is WeaponId.Blaster
+                or WeaponId.Shotgun
+                or WeaponId.Launcher
+                or WeaponId.Vaporizer
+                or WeaponId.SniperRifle
+                or WeaponId.Fireballer;
         }
 
         private static byte GetMask(WeaponId weaponId)
@@ -195,6 +220,9 @@ namespace FPSBasic.Multiplayer.Weapons
             blasterPrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/Weapon_Blaster.prefab");
             launcherPrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/Weapon_Launcher.prefab");
             shotgunPrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/Weapon_Shotgun.prefab");
+            vaporizerPrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/MgFPS_Vaporizer/Weapon_Vaporizer.prefab");
+            sniperRiflePrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/MgFPS_SniperRifle/Weapon_SniperRifle.prefab");
+            fireballerPrefab = LoadWeapon("Assets/FPS/Prefabs/Weapons/MgFPS_Fireballer/Weapon_Fireballer.prefab");
         }
 
         private static WeaponController LoadWeapon(string assetPath)

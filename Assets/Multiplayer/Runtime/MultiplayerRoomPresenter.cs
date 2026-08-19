@@ -290,7 +290,7 @@ namespace FPSBasic.Multiplayer
             }
 
             _roomState.RequestTeamChange(requestedTeam);
-            SetStatus($"Requested move to {requestedTeam}. Waiting for server approval...");
+            SetStatus($"Requested move. Waiting for server approval...");
         }
 
         private void ClearLists()
